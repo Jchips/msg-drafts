@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header {
+  display: flex;
+}
+
+.header .btn {
+  margin: 5px;
+}
+
+/* Centers the profile card */
+.profile-card {
+  margin: auto auto;
+}

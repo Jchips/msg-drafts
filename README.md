@@ -1,6 +1,36 @@
-# Getting Started with Create React App
+# MSG Drafts
+
+**Author**: Jelani R.
+**Version**: 1.0.0
+
+## Overview
+
+MERN stack app to type message drafts in before you send them to people.
+
+## Getting Started
+
+- Run `npm i` in terminal to install all dependencies. Do for both frontend and backend.
+- Create .env file and add required stuff in (can see in .env.sample)
+- See the Available Scripts below to run the app.
+
+## Architecture
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Built with JavaScript, JSX, CSS and SASS/SCSS. Uses Bootstrap/React Bootstrap, React Router, MongoDB (backend), and Axios.
+
+## Changelog
+
+- 08/31/23 - (1.0.0) Users can log in with their Google account and perform CRUD operations to add/delete and edit drafts.
+
+## My Resources
+
+- [Auth0](https://auth0.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+
+## Upcoming features
+
+- Add a button to copy everything in the draft
 
 ## Available Scripts
 

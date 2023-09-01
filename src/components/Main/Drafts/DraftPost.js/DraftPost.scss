@@ -1,0 +1,18 @@
+.draft-post {
+  margin: 10px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trash-btn,
+.edit-btn {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.card-text {
+  white-space: pre-line;
+}
