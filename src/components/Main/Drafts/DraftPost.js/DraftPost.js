@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Card } from 'react-bootstrap';
 import { FaTrash } from 'react-icons/fa';
 import { FaEdit } from 'react-icons/fa';
+import { FaCopy } from 'react-icons/fa';
 import './DraftPost.scss';
 
 const DraftPost = (props) => {
   const { draft, removeDraft, setShowEditModal, setSelectedDraft} = props;
+  const textareaRef = useRef(null);
 
   /**
    * Shows the edit modal so that user can edit their draft.
@@ -29,17 +31,23 @@ const DraftPost = (props) => {
     return formattedDate + ' @ ' + formattedTime;
   }
 
+  // Copies the text to the clipboard
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(textareaRef.current.innerText);
+  }
+
   return (
-    <Card style={{ width: '35rem' }} className='draft-post'>
+    <Card style={{ maxWidth: '35rem' }} className='draft-post'>
       <Card.Header>
         <Card.Title>{draft.title}</Card.Title>
         <div>
-          <FaEdit className='edit-btn' onClick={() => showEditModalAndSelectPost(draft)}/>
-          <FaTrash className='trash-btn' onClick={() => removeDraft(draft)} />
+          <FaCopy className='copy-btn' onClick={() => copyToClipboard()} title='copy' />
+          <FaEdit className='edit-btn' onClick={() => showEditModalAndSelectPost(draft)} title='edit' />
+          <FaTrash className='trash-btn' onClick={() => removeDraft(draft)} title='delete' />
         </div>
       </Card.Header>
       <Card.Body>
-        <Card.Text>{draft.text}</Card.Text>
+        <Card.Text ref={textareaRef}>{draft.text}</Card.Text>
       </Card.Body>
       <Card.Footer>{formatDate(draft.dateCreated)}</Card.Footer>
     </Card>

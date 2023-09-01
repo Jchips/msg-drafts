@@ -17,11 +17,11 @@ MERN stack app to type message drafts in before you send them to people.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Built with JavaScript, JSX, CSS and SASS/SCSS. Uses Bootstrap/React Bootstrap, React Router, MongoDB (backend), and Axios.
+Built with JavaScript, JSX, CSS and SASS/SCSS. Uses Auth0, Bootstrap/React Bootstrap, React Router, MongoDB (backend), and Axios.
 
 ## Changelog
 
-- 08/31/23 - (1.0.0) Users can log in with their Google account and perform CRUD operations to add/delete and edit drafts.
+- 08/31/23 - (1.0.0) Users can log in with their Google account and perform CRUD operations to add/delete and edit drafts. They can also copy the text in their draft to their device's clipboard.
 
 ## My Resources
 
