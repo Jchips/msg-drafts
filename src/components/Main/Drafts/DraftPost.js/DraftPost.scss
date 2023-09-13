@@ -7,11 +7,11 @@
   justify-content: space-between;
 }
 
-.trash-btn,
-.edit-btn,
-.copy-btn {
-  cursor: pointer;
-  margin-left: 5px;
+.btn-wrapper {
+  margin: 0 3px;
+  border-radius: 5px;
+  padding-bottom: 5px;
+  border-color: #fefefe;
 }
 
 .card-text {

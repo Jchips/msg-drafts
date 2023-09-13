@@ -1,13 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { FaTrash } from 'react-icons/fa';
 import { FaEdit } from 'react-icons/fa';
 import { FaCopy } from 'react-icons/fa';
 import './DraftPost.scss';
+import DeleteConfirmation from './DraftModels.js/DeleteConfirmation';
 
 const DraftPost = (props) => {
   const { draft, removeDraft, setShowEditModal, setSelectedDraft} = props;
   const textareaRef = useRef(null);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
 
   /**
    * Shows the edit modal so that user can edit their draft.
@@ -37,20 +39,34 @@ const DraftPost = (props) => {
   }
 
   return (
-    <Card style={{ maxWidth: '35rem' }} className='draft-post'>
-      <Card.Header>
-        <Card.Title>{draft.title}</Card.Title>
-        <div>
-          <FaCopy className='copy-btn' onClick={() => copyToClipboard()} title='copy' />
-          <FaEdit className='edit-btn' onClick={() => showEditModalAndSelectPost(draft)} title='edit' />
-          <FaTrash className='trash-btn' onClick={() => removeDraft(draft)} title='delete' />
-        </div>
-      </Card.Header>
-      <Card.Body>
-        <Card.Text ref={textareaRef}>{draft.text}</Card.Text>
-      </Card.Body>
-      <Card.Footer>{formatDate(draft.dateCreated)}</Card.Footer>
-    </Card>
+    <>
+      <Card style={{ maxWidth: '35rem' }} className='draft-post'>
+        <Card.Header>
+          <Card.Title>{draft.title}</Card.Title>
+          <div>
+            <button className='btn-wrapper' onClick={() => copyToClipboard()} title='copy'>
+              <FaCopy />
+            </button>
+            <button className='btn-wrapper' onClick={() => showEditModalAndSelectPost(draft)} title='edit'>
+              <FaEdit />
+            </button>
+            <button className="btn-wrapper"  onClick={() => setShowDeleteModal(true)} title='delete'>
+              <FaTrash />
+            </button>
+          </div>
+        </Card.Header>
+        <Card.Body>
+          <Card.Text ref={textareaRef}>{draft.text}</Card.Text>
+        </Card.Body>
+        <Card.Footer>{formatDate(draft.dateCreated)}</Card.Footer>
+      </Card>
+      <DeleteConfirmation 
+        showDeleteModal={showDeleteModal}
+        setShowDeleteModal={setShowDeleteModal}
+        draft={draft}
+        removeDraft={removeDraft}
+      />
+    </>
   );
 }
 
