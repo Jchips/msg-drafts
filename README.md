@@ -21,7 +21,8 @@ Built with JavaScript, JSX, CSS and SASS/SCSS. Uses Auth0, Bootstrap/React Boots
 
 ## Changelog
 
-- 09/12/23 - (1.0.1) Styled the buttons. Added a delete confirmation modal.
+- 09/14/23 - (1.0.2) Styled the draft card a little.
+- 09/12/23 - (1.0.1) Styled the buttons. New favicon. Added a delete confirmation modal.
 - 08/31/23 - (1.0.0) Users can log in with their Google account and perform CRUD operations to add/delete and edit drafts. They can also copy the text in their draft to their device's clipboard.
 
 ## My Resources
