@@ -1,7 +1,7 @@
 # MSG Drafts
 
 **Author**: Jelani R.
-**Version**: 1.0.0
+**Version**: 1.0.3
 
 ## Overview
 
@@ -21,6 +21,7 @@ Built with JavaScript, JSX, CSS and SASS/SCSS. Uses Auth0, Bootstrap/React Boots
 
 ## Changelog
 
+- 10/13/23 - (1.0.3) Changed the colors of the draft headers.
 - 09/14/23 - (1.0.2) Styled the draft card a little.
 - 09/12/23 - (1.0.1) Styled the buttons. New favicon. Added a delete confirmation modal.
 - 08/31/23 - (1.0.0) Users can log in with their Google account and perform CRUD operations to add/delete and edit drafts. They can also copy the text in their draft to their device's clipboard.
@@ -32,7 +33,7 @@ Built with JavaScript, JSX, CSS and SASS/SCSS. Uses Auth0, Bootstrap/React Boots
 
 ## Upcoming features
 
-- Add a button to copy everything in the draft
+- Add/display online drafts section on one side and msg drafts on the other.
 
 ## Available Scripts
 

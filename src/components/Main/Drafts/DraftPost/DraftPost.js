@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { Card } from 'react-bootstrap';
-import { FaTrash } from 'react-icons/fa';
-import { FaEdit } from 'react-icons/fa';
-import { FaCopy } from 'react-icons/fa';
+import { LuTrash2 } from 'react-icons/lu';
+import { FaRegEdit } from 'react-icons/fa';
+import { GrCopy } from 'react-icons/gr';
 import './DraftPost.scss';
-import DeleteConfirmation from './DraftModels.js/DeleteConfirmation';
+import DeleteConfirmation from './DraftModals/DeleteConfirmation';
 
 const DraftPost = (props) => {
   const { draft, removeDraft, setShowEditModal, setSelectedDraft} = props;
@@ -45,13 +45,13 @@ const DraftPost = (props) => {
           <Card.Title>{draft.title}</Card.Title>
           <div>
             <button className='btn-wrapper' onClick={() => copyToClipboard()} title='copy'>
-              <FaCopy />
+              <GrCopy />
             </button>
             <button className='btn-wrapper' onClick={() => showEditModalAndSelectPost(draft)} title='edit'>
-              <FaEdit />
+              <FaRegEdit />
             </button>
             <button className="btn-wrapper"  onClick={() => setShowDeleteModal(true)} title='delete'>
-              <FaTrash />
+              <LuTrash2 />
             </button>
           </div>
         </Card.Header>

@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useAuth0 } from "@auth0/auth0-react";
 import './Drafts.scss';
 import axios from 'axios';
-import DraftPost from './DraftPost.js/DraftPost';
+import DraftPost from './DraftPost/DraftPost';
 import { Button } from 'react-bootstrap';
-import AddNewDraft from './DraftPost.js/DraftModels.js/AddNewDraft';
-import EditNewDraft from './DraftPost.js/DraftModels.js/EditNewDraft';
+import AddNewDraft from './DraftPost/DraftModals/AddNewDraft';
+import EditNewDraft from './DraftPost/DraftModals/EditNewDraft';
 
 const MsgDrafts = () => {
   const [drafts, setDrafts] = useState([]);
